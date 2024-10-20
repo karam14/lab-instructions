@@ -1,4 +1,7 @@
 
+> **Disclaimer:** The following instructions are provided as guidance for the skills test planned based on the lab sessions performed in the course. These instructions are not to be used for any malicious purposes and are intended solely for educational purposes. They should be used in a controlled environment, and the author of the instructions is not responsible for any misuse of the information provided. Many of these instructions are inspired by [Inside Job](https://github.com/Ardemium/InsideJob) and have been significantly modified to fit the requirements of the owner of this repository.
+
+
 # Step-by-Step Attack Process
 
 ## Initial Enumeration of the Environment
