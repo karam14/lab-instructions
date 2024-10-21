@@ -346,6 +346,11 @@ dir \\192.168.56.30\c$
 
 ## Further Enumeration and Persistence
 
+to connect to the remote device you should psexec a new remote session. do that by doing:
+```bash
+psexec.exe -r <processname> /accepteula \\remote_ip cmd.exe
+```
+
 ### 12. Create a Temporary Folder
 ```bash
 cd C:\
