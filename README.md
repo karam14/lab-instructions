@@ -13,6 +13,8 @@ To gather basic information about the user and domain environment, use the follo
 whoami
 hostname
 systeminfo
+echo %logonserver%
+
 ```
 - **whoami**: Displays the currently logged-in user.
 - **hostname**: Reveals the name of the local machine.
@@ -22,7 +24,12 @@ systeminfo
 To understand the structure of domain groups and identify privileged users:
 
 ```bash
+//to find domain users
+net user /domain
+
+//to find domain groups
 net group /domain
+//to find users from the group domain admins
 net group "domain admins" /domain
 ```
 - **net group /domain**: Lists all domain groups.
